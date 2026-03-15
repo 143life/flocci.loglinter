@@ -14,8 +14,8 @@ type Config struct {
 	UseRegex            bool     `mapstructure:"use_regex"`
 	CheckFirstLowercase bool     `mapstructure:"check_first_lowercase"`
 	ForbidEmoji         bool     `mapstructure:"forbid_emoji"`
-	//MaxLength           int      `mapstructure:"max_length"`
-	AllowOnlyASCII bool `mapstructure:"allow_only_ascii"`
+	ForbidSpecialChars  bool     `mapstructure:"forbid_special_chars"`
+	AllowOnlyASCII      bool     `mapstructure:"allow_only_ascii"`
 }
 
 var (
@@ -29,8 +29,8 @@ func DefaultConfig() *Config {
 		SensitivePatterns:   []string{"password", "token", "secret", "key"},
 		CheckFirstLowercase: true,
 		ForbidEmoji:         true,
-		//MaxLength:           0,
-		AllowOnlyASCII: false,
+		ForbidSpecialChars:  true,
+		AllowOnlyASCII:      true,
 	}
 }
 

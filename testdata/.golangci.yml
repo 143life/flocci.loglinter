@@ -15,7 +15,8 @@ linters:
             - "password"
             - "token"
             - "secret"
+            - "api_key"
           check_first_lowercase: true
           forbid_emoji: true
-          #max_length: 100
+          forbid_special_chars: true
           allow_only_ascii: true

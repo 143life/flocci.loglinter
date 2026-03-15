@@ -7,5 +7,5 @@ sensitive_patterns:
 use_regex: true
 check_first_lowercase: true
 forbid_emoji: true
-#max_length: 200
+forbid_special_chars: true
 allow_only_ascii: true

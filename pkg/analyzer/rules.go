@@ -36,3 +36,16 @@ func isASCII(s string) bool {
 	}
 	return true
 }
+
+func containsSpecialChars(s string) bool {
+	for _, r := range s {
+		if r > 0x7F {
+			continue
+		}
+		if (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') || (r >= '0' && r <= '9') || r == ' ' {
+			continue
+		}
+		return true
+	}
+	return false
+}
