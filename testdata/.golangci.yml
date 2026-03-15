@@ -1,0 +1,21 @@
+version: "2"
+
+linters:
+  default: none
+  enable:
+    - flocciloglint
+  settings:
+    custom:
+      flocciloglint:
+        type: "module"
+        description: "Log message linter"
+        settings:
+          use_regex: true
+          sensitive_patterns:
+            - "password"
+            - "token"
+            - "secret"
+          check_first_lowercase: true
+          forbid_emoji: true
+          #max_length: 100
+          allow_only_ascii: true

@@ -1,0 +1,9 @@
+# .custom-gcl.yml
+version: v2.0.0 # Версия golangci-lint, с которой собираем
+name: custom-gcl-with-loglint
+destination: ./bin
+
+plugins:
+  - module: 'github.com/143life/flocci.loglinter'   # Имя твоего модуля (из go.mod)
+    import: 'github.com/143life/flocci.loglinter/pkg/golangci' # Где искать Plugin()
+    path: . # Так как плагин локально, путь к корню проекта

@@ -1,0 +1,11 @@
+# config.yaml
+sensitive_patterns:
+  - "password"
+  - "token"
+  - "secret.*key"
+  - "credit.?card"
+use_regex: true
+check_first_lowercase: true
+forbid_emoji: true
+#max_length: 200
+allow_only_ascii: true
